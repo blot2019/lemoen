@@ -28,6 +28,7 @@ char	*ft_undin(int fd)
 
 	if (!(buf = (char *)malloc(sizeof(char) * 1000000)))
 		return (NULL);
+	buf[0] = '\0';
 	while (get_next_line(fd, &line) > 0)
 	{
 		concat_me_stdin(&buf, line);
@@ -45,9 +46,24 @@ int check_and_parse(char **spl)
 {
 	t_lemin lemin;
 
-	if (init_lemin(&lemin, spl))
+	lemin.start = -1;
+	lemin.end = -1;
+	if (!init_lemin(&lemin, spl))
 		return (0);
 	return (1);
+}
+
+int search_void_string(char *str)
+{
+	int i;
+
+	i = -1;
+	while (str[++i])
+	{
+		if (str[i + 1] && str[i] == '\n' && str[i + 1] == '\n')
+			return (1);
+	}
+	return (0);
 }
 
 int lets_read(void)
@@ -57,7 +73,16 @@ int lets_read(void)
 	int fd;
 
 	fd = open("hex_test",O_RDONLY);
-	input = ft_undin(fd);
+	if (!(input = ft_undin(fd)))
+		return (0);
+	if (search_void_string(input))
+	{
+		free(input);
+		return (0);
+	}
 	spl = ft_strsplit(input, '\n');
-	return (check_and_parse(spl));
+	free(input);
+	if (!check_and_parse(spl))
+		return (0);
+	return (1);
 }

@@ -1006,6 +1006,58 @@ CMakeFiles/lemin.dir/create_links.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/lemin.dir/create_links.c.s"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/gemerald/mfgt/lemin/create_links.c -o CMakeFiles/lemin.dir/create_links.c.s
 
+CMakeFiles/lemin.dir/hash_utils.c.o: CMakeFiles/lemin.dir/flags.make
+CMakeFiles/lemin.dir/hash_utils.c.o: ../hash_utils.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/gemerald/mfgt/lemin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_74) "Building C object CMakeFiles/lemin.dir/hash_utils.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/lemin.dir/hash_utils.c.o   -c /Users/gemerald/mfgt/lemin/hash_utils.c
+
+CMakeFiles/lemin.dir/hash_utils.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/lemin.dir/hash_utils.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/gemerald/mfgt/lemin/hash_utils.c > CMakeFiles/lemin.dir/hash_utils.c.i
+
+CMakeFiles/lemin.dir/hash_utils.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/lemin.dir/hash_utils.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/gemerald/mfgt/lemin/hash_utils.c -o CMakeFiles/lemin.dir/hash_utils.c.s
+
+CMakeFiles/lemin.dir/hash_function.c.o: CMakeFiles/lemin.dir/flags.make
+CMakeFiles/lemin.dir/hash_function.c.o: ../hash_function.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/gemerald/mfgt/lemin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_75) "Building C object CMakeFiles/lemin.dir/hash_function.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/lemin.dir/hash_function.c.o   -c /Users/gemerald/mfgt/lemin/hash_function.c
+
+CMakeFiles/lemin.dir/hash_function.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/lemin.dir/hash_function.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/gemerald/mfgt/lemin/hash_function.c > CMakeFiles/lemin.dir/hash_function.c.i
+
+CMakeFiles/lemin.dir/hash_function.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/lemin.dir/hash_function.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/gemerald/mfgt/lemin/hash_function.c -o CMakeFiles/lemin.dir/hash_function.c.s
+
+CMakeFiles/lemin.dir/make_free.c.o: CMakeFiles/lemin.dir/flags.make
+CMakeFiles/lemin.dir/make_free.c.o: ../make_free.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/gemerald/mfgt/lemin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_76) "Building C object CMakeFiles/lemin.dir/make_free.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/lemin.dir/make_free.c.o   -c /Users/gemerald/mfgt/lemin/make_free.c
+
+CMakeFiles/lemin.dir/make_free.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/lemin.dir/make_free.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/gemerald/mfgt/lemin/make_free.c > CMakeFiles/lemin.dir/make_free.c.i
+
+CMakeFiles/lemin.dir/make_free.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/lemin.dir/make_free.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/gemerald/mfgt/lemin/make_free.c -o CMakeFiles/lemin.dir/make_free.c.s
+
+CMakeFiles/lemin.dir/validate_rooms.c.o: CMakeFiles/lemin.dir/flags.make
+CMakeFiles/lemin.dir/validate_rooms.c.o: ../validate_rooms.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/gemerald/mfgt/lemin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_77) "Building C object CMakeFiles/lemin.dir/validate_rooms.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/lemin.dir/validate_rooms.c.o   -c /Users/gemerald/mfgt/lemin/validate_rooms.c
+
+CMakeFiles/lemin.dir/validate_rooms.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/lemin.dir/validate_rooms.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/gemerald/mfgt/lemin/validate_rooms.c > CMakeFiles/lemin.dir/validate_rooms.c.i
+
+CMakeFiles/lemin.dir/validate_rooms.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/lemin.dir/validate_rooms.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/gemerald/mfgt/lemin/validate_rooms.c -o CMakeFiles/lemin.dir/validate_rooms.c.s
+
 # Object files for target lemin
 lemin_OBJECTS = \
 "CMakeFiles/lemin.dir/libft/ft_atoi.c.o" \
@@ -1080,7 +1132,11 @@ lemin_OBJECTS = \
 "CMakeFiles/lemin.dir/pars_hex.c.o" \
 "CMakeFiles/lemin.dir/structure_init.c.o" \
 "CMakeFiles/lemin.dir/structure_init_2.c.o" \
-"CMakeFiles/lemin.dir/create_links.c.o"
+"CMakeFiles/lemin.dir/create_links.c.o" \
+"CMakeFiles/lemin.dir/hash_utils.c.o" \
+"CMakeFiles/lemin.dir/hash_function.c.o" \
+"CMakeFiles/lemin.dir/make_free.c.o" \
+"CMakeFiles/lemin.dir/validate_rooms.c.o"
 
 # External object files for target lemin
 lemin_EXTERNAL_OBJECTS =
@@ -1158,9 +1214,13 @@ lemin: CMakeFiles/lemin.dir/pars_hex.c.o
 lemin: CMakeFiles/lemin.dir/structure_init.c.o
 lemin: CMakeFiles/lemin.dir/structure_init_2.c.o
 lemin: CMakeFiles/lemin.dir/create_links.c.o
+lemin: CMakeFiles/lemin.dir/hash_utils.c.o
+lemin: CMakeFiles/lemin.dir/hash_function.c.o
+lemin: CMakeFiles/lemin.dir/make_free.c.o
+lemin: CMakeFiles/lemin.dir/validate_rooms.c.o
 lemin: CMakeFiles/lemin.dir/build.make
 lemin: CMakeFiles/lemin.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/gemerald/mfgt/lemin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_74) "Linking C executable lemin"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/gemerald/mfgt/lemin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_78) "Linking C executable lemin"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/lemin.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

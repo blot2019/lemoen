@@ -55,12 +55,26 @@ void        print_rooms(t_lemin *lemin)
 
 int         init_lemin(t_lemin *lemin, char **spl)
 {
+	int end;
+
+	end = 1;
+	lemin->initial_text = spl;
+	//ft_print_char_arr(spl);
+	null_pointer_upload(lemin);
 	if (!take_ants(lemin, spl))
-		return (0);
+		end = 0;
 	if (!take_rooms(lemin, spl))
+		end = 0;
+	hash_table_upload(lemin);
+	if (!check_rooms(lemin))
+		end = 0;
+	if (end && !take_links(lemin, spl))
+		end = 0;
+	//print_rooms(lemin);
+	if (!end)
+	{
+		free_for_all(lemin);
 		return (0);
-	if (!take_links(lemin, spl))
-		return (0);
-	print_rooms(lemin);
+	}
 	return (1);
 }

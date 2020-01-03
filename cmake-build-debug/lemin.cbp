@@ -85,6 +85,12 @@
 		<Unit filename="/Users/gemerald/mfgt/lemin/create_links.c">
 			<Option target="lemin"/>
 		</Unit>
+		<Unit filename="/Users/gemerald/mfgt/lemin/hash_function.c">
+			<Option target="lemin"/>
+		</Unit>
+		<Unit filename="/Users/gemerald/mfgt/lemin/hash_utils.c">
+			<Option target="lemin"/>
+		</Unit>
 		<Unit filename="/Users/gemerald/mfgt/lemin/lemin.h">
 			<Option target="lemin"/>
 		</Unit>
@@ -295,6 +301,9 @@
 		<Unit filename="/Users/gemerald/mfgt/lemin/main_validation.c">
 			<Option target="lemin"/>
 		</Unit>
+		<Unit filename="/Users/gemerald/mfgt/lemin/make_free.c">
+			<Option target="lemin"/>
+		</Unit>
 		<Unit filename="/Users/gemerald/mfgt/lemin/pars_hex.c">
 			<Option target="lemin"/>
 		</Unit>
@@ -305,6 +314,9 @@
 			<Option target="lemin"/>
 		</Unit>
 		<Unit filename="/Users/gemerald/mfgt/lemin/structure_init_2.c">
+			<Option target="lemin"/>
+		</Unit>
+		<Unit filename="/Users/gemerald/mfgt/lemin/validate_rooms.c">
 			<Option target="lemin"/>
 		</Unit>
 		<Unit filename="/Users/gemerald/mfgt/lemin/CMakeLists.txt">

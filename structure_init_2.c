@@ -74,19 +74,17 @@ int     fill_one_link(char *str, t_hash *hash_found, t_lemin *lemin)
 	border = -1;
 	hash_found->hash_first = 0;
 	hash_found->hash_second = 0;
-	border_count = fill_borders(str);
+	if (fill_borders(str) > 1)
+		return (0);
 	start = take_next_start(str, start);
-	while (border_count--)
-	{
-		border = take_next_border(str, border);
-		hash_found->hash_first = hash_my_name(str, start, border);
-		if (real_hash(hash_found->hash_first, lemin))
-			break ;
-	}
+	border = take_next_border(str, border);
+	hash_found->hash_first = hash_my_name(str, start, border);
+	hash_found->first_name = ft_strsub(str, start, border - start);
 	start = border;
 	start = take_next_start(str, start);
 	border = ft_strlen(str);
 	hash_found->hash_second = hash_my_name(str, start, border);
+	hash_found->second_name = ft_strsub(str, start, border - start);
 	return (1);
 }
 
@@ -98,9 +96,18 @@ int     take_links(t_lemin *lemin, char **spl)
 	y = lemin->start_links - 1;
 	while (spl[++y])
 	{
+		hash_found.first_name = NULL;
+		hash_found.second_name = NULL;
 		if (!fill_one_link(spl[y], &hash_found, lemin))
 			return (0);
-		create_link_in_room(lemin, hash_found);
+		if (!create_link_in_room(lemin, hash_found))
+		{
+			free(hash_found.first_name);
+			free(hash_found.second_name);
+			return (0);
+		}
+		free(hash_found.first_name);
+		free(hash_found.second_name);
 	}
 	return (1);
 }

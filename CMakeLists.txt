@@ -73,4 +73,4 @@ add_executable(lemin
         libft/ft_tolower.c
         libft/ft_toupper.c
         libft/get_next_line.c
-        libft/libft.h main_validation.c pars_utils.c lemin.h pars_hex.c structure_init.c structure_init_2.c create_links.c)
+        libft/libft.h main_validation.c pars_utils.c lemin.h pars_hex.c structure_init.c structure_init_2.c create_links.c hash_utils.c hash_function.c make_free.c validate_rooms.c)

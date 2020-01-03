@@ -5,6 +5,14 @@ CMakeFiles/lemin.dir/create_links.c.o: ../create_links.c
 CMakeFiles/lemin.dir/create_links.c.o: ../lemin.h
 CMakeFiles/lemin.dir/create_links.c.o: ../libft/libft.h
 
+CMakeFiles/lemin.dir/hash_function.c.o: ../hash_function.c
+CMakeFiles/lemin.dir/hash_function.c.o: ../lemin.h
+CMakeFiles/lemin.dir/hash_function.c.o: ../libft/libft.h
+
+CMakeFiles/lemin.dir/hash_utils.c.o: ../hash_utils.c
+CMakeFiles/lemin.dir/hash_utils.c.o: ../lemin.h
+CMakeFiles/lemin.dir/hash_utils.c.o: ../libft/libft.h
+
 CMakeFiles/lemin.dir/libft/ft_atoi.c.o: ../libft/ft_atoi.c
 CMakeFiles/lemin.dir/libft/ft_atoi.c.o: ../libft/libft.h
 
@@ -210,6 +218,10 @@ CMakeFiles/lemin.dir/main_validation.c.o: ../lemin.h
 CMakeFiles/lemin.dir/main_validation.c.o: ../libft/libft.h
 CMakeFiles/lemin.dir/main_validation.c.o: ../main_validation.c
 
+CMakeFiles/lemin.dir/make_free.c.o: ../lemin.h
+CMakeFiles/lemin.dir/make_free.c.o: ../libft/libft.h
+CMakeFiles/lemin.dir/make_free.c.o: ../make_free.c
+
 CMakeFiles/lemin.dir/pars_hex.c.o: ../lemin.h
 CMakeFiles/lemin.dir/pars_hex.c.o: ../libft/libft.h
 CMakeFiles/lemin.dir/pars_hex.c.o: ../pars_hex.c
@@ -225,4 +237,8 @@ CMakeFiles/lemin.dir/structure_init.c.o: ../structure_init.c
 CMakeFiles/lemin.dir/structure_init_2.c.o: ../lemin.h
 CMakeFiles/lemin.dir/structure_init_2.c.o: ../libft/libft.h
 CMakeFiles/lemin.dir/structure_init_2.c.o: ../structure_init_2.c
+
+CMakeFiles/lemin.dir/validate_rooms.c.o: ../lemin.h
+CMakeFiles/lemin.dir/validate_rooms.c.o: ../libft/libft.h
+CMakeFiles/lemin.dir/validate_rooms.c.o: ../validate_rooms.c
 

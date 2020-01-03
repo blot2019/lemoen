@@ -6,6 +6,10 @@
 
 #IncludeRegexTransform: 
 
+/Users/gemerald/mfgt/lemin/create_links.c
+lemin.h
+/Users/gemerald/mfgt/lemin/lemin.h
+
 /Users/gemerald/mfgt/lemin/lemin.h
 libft/libft.h
 /Users/gemerald/mfgt/lemin/libft/libft.h
@@ -17,8 +21,4 @@ stdlib.h
 -
 string.h
 -
-
-/Users/gemerald/mfgt/lemin/structure_init.c
-lemin.h
-/Users/gemerald/mfgt/lemin/lemin.h
 

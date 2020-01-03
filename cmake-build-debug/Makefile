@@ -150,6 +150,60 @@ create_links.c.s:
 	$(MAKE) -f CMakeFiles/lemin.dir/build.make CMakeFiles/lemin.dir/create_links.c.s
 .PHONY : create_links.c.s
 
+hash_function.o: hash_function.c.o
+
+.PHONY : hash_function.o
+
+# target to build an object file
+hash_function.c.o:
+	$(MAKE) -f CMakeFiles/lemin.dir/build.make CMakeFiles/lemin.dir/hash_function.c.o
+.PHONY : hash_function.c.o
+
+hash_function.i: hash_function.c.i
+
+.PHONY : hash_function.i
+
+# target to preprocess a source file
+hash_function.c.i:
+	$(MAKE) -f CMakeFiles/lemin.dir/build.make CMakeFiles/lemin.dir/hash_function.c.i
+.PHONY : hash_function.c.i
+
+hash_function.s: hash_function.c.s
+
+.PHONY : hash_function.s
+
+# target to generate assembly for a file
+hash_function.c.s:
+	$(MAKE) -f CMakeFiles/lemin.dir/build.make CMakeFiles/lemin.dir/hash_function.c.s
+.PHONY : hash_function.c.s
+
+hash_utils.o: hash_utils.c.o
+
+.PHONY : hash_utils.o
+
+# target to build an object file
+hash_utils.c.o:
+	$(MAKE) -f CMakeFiles/lemin.dir/build.make CMakeFiles/lemin.dir/hash_utils.c.o
+.PHONY : hash_utils.c.o
+
+hash_utils.i: hash_utils.c.i
+
+.PHONY : hash_utils.i
+
+# target to preprocess a source file
+hash_utils.c.i:
+	$(MAKE) -f CMakeFiles/lemin.dir/build.make CMakeFiles/lemin.dir/hash_utils.c.i
+.PHONY : hash_utils.c.i
+
+hash_utils.s: hash_utils.c.s
+
+.PHONY : hash_utils.s
+
+# target to generate assembly for a file
+hash_utils.c.s:
+	$(MAKE) -f CMakeFiles/lemin.dir/build.make CMakeFiles/lemin.dir/hash_utils.c.s
+.PHONY : hash_utils.c.s
+
 libft/ft_atoi.o: libft/ft_atoi.c.o
 
 .PHONY : libft/ft_atoi.o
@@ -1986,6 +2040,33 @@ main_validation.c.s:
 	$(MAKE) -f CMakeFiles/lemin.dir/build.make CMakeFiles/lemin.dir/main_validation.c.s
 .PHONY : main_validation.c.s
 
+make_free.o: make_free.c.o
+
+.PHONY : make_free.o
+
+# target to build an object file
+make_free.c.o:
+	$(MAKE) -f CMakeFiles/lemin.dir/build.make CMakeFiles/lemin.dir/make_free.c.o
+.PHONY : make_free.c.o
+
+make_free.i: make_free.c.i
+
+.PHONY : make_free.i
+
+# target to preprocess a source file
+make_free.c.i:
+	$(MAKE) -f CMakeFiles/lemin.dir/build.make CMakeFiles/lemin.dir/make_free.c.i
+.PHONY : make_free.c.i
+
+make_free.s: make_free.c.s
+
+.PHONY : make_free.s
+
+# target to generate assembly for a file
+make_free.c.s:
+	$(MAKE) -f CMakeFiles/lemin.dir/build.make CMakeFiles/lemin.dir/make_free.c.s
+.PHONY : make_free.c.s
+
 pars_hex.o: pars_hex.c.o
 
 .PHONY : pars_hex.o
@@ -2094,6 +2175,33 @@ structure_init_2.c.s:
 	$(MAKE) -f CMakeFiles/lemin.dir/build.make CMakeFiles/lemin.dir/structure_init_2.c.s
 .PHONY : structure_init_2.c.s
 
+validate_rooms.o: validate_rooms.c.o
+
+.PHONY : validate_rooms.o
+
+# target to build an object file
+validate_rooms.c.o:
+	$(MAKE) -f CMakeFiles/lemin.dir/build.make CMakeFiles/lemin.dir/validate_rooms.c.o
+.PHONY : validate_rooms.c.o
+
+validate_rooms.i: validate_rooms.c.i
+
+.PHONY : validate_rooms.i
+
+# target to preprocess a source file
+validate_rooms.c.i:
+	$(MAKE) -f CMakeFiles/lemin.dir/build.make CMakeFiles/lemin.dir/validate_rooms.c.i
+.PHONY : validate_rooms.c.i
+
+validate_rooms.s: validate_rooms.c.s
+
+.PHONY : validate_rooms.s
+
+# target to generate assembly for a file
+validate_rooms.c.s:
+	$(MAKE) -f CMakeFiles/lemin.dir/build.make CMakeFiles/lemin.dir/validate_rooms.c.s
+.PHONY : validate_rooms.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -2106,6 +2214,12 @@ help:
 	@echo "... create_links.o"
 	@echo "... create_links.i"
 	@echo "... create_links.s"
+	@echo "... hash_function.o"
+	@echo "... hash_function.i"
+	@echo "... hash_function.s"
+	@echo "... hash_utils.o"
+	@echo "... hash_utils.i"
+	@echo "... hash_utils.s"
 	@echo "... libft/ft_atoi.o"
 	@echo "... libft/ft_atoi.i"
 	@echo "... libft/ft_atoi.s"
@@ -2310,6 +2424,9 @@ help:
 	@echo "... main_validation.o"
 	@echo "... main_validation.i"
 	@echo "... main_validation.s"
+	@echo "... make_free.o"
+	@echo "... make_free.i"
+	@echo "... make_free.s"
 	@echo "... pars_hex.o"
 	@echo "... pars_hex.i"
 	@echo "... pars_hex.s"
@@ -2322,6 +2439,9 @@ help:
 	@echo "... structure_init_2.o"
 	@echo "... structure_init_2.i"
 	@echo "... structure_init_2.s"
+	@echo "... validate_rooms.o"
+	@echo "... validate_rooms.i"
+	@echo "... validate_rooms.s"
 .PHONY : help
 
 

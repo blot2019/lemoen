@@ -18,9 +18,15 @@ int     take_ants(t_lemin *lemin, char **spl)
 	{
 		if (spl[y][x] != '#' && spl[y][x])
 		{
-			lemin->ant_count = ft_atoi_push(spl[y], &x, &ower);
-			if (lemin->ant_count  < 1 || !ower )
+			if (ft_isspace(spl[y][0]))
 				return (0);
+			lemin->ant_count = ft_atoi_push(spl[y], &x, &ower);
+			x++;
+			if (lemin->ant_count  < 1 || !ower || spl[y][x])
+			{
+				lemin->start_rooms = y;
+				return (0);
+			}
 		}
 	}
 	lemin->start_rooms = y;
@@ -71,21 +77,8 @@ int    remember_room_name(char *str, char **room_name, int *i)
 	return (1);
 }
 
-int     hash_my_name(char *str, int start, int border)
-{
-	int len;
-	int hash;
 
-	len = border - start;
-	hash = 0;
-	while(start < border)
-	{
-		hash += (str[start++] * (len--));
-	}
-	return (hash);
-}
-
-t_room  charge_room(char *str, int index_room)
+t_room  charge_room(char *str, int index_room, int *flag)
 {
 	t_room room;
 	int     ower;
@@ -96,41 +89,53 @@ t_room  charge_room(char *str, int index_room)
 	ower = 1;
 	i = 0;
 	if (!remember_room_name(str, &room.name, &i))
-		exit (-1);
+		*flag = 1;
 	room.x_coord = ft_atoi_push(str, &i, &ower);
 	room.y_coord = ft_atoi_push(str, &i, &ower);
-	if (!ower)
-		exit (-11);
+	if (!ower || str[i])
+		*flag = 2;
 	room.hash = hash_my_name(room.name, 0, ft_strlen(room.name));
 	return (room);
+}
+
+void    take_start_end(t_lemin *lemin, int room, int y)
+{
+	if (y == lemin->start)
+	{
+		lemin->rooms[room].part = 1;
+		lemin->start = room;
+	}
+	if (y == lemin->end)
+	{
+		lemin->rooms[room].part = -1;
+		lemin->end = room;
+	}
 }
 
 int     take_rooms(t_lemin *lemin, char **spl)
 {
 	int y;
 	int room;
+	int flag;
 
 	find_borders(lemin, spl);
 	room = 0;
+	flag = 0;
 	if (!(lemin->rooms = (t_room *)malloc(sizeof(t_room) * lemin->rooms_len)))
-		return (0);
+		return (lemin->rooms_len = 0);
 	y = lemin->start_rooms - 1;
 	while (++y < lemin->start_links)
 	{
 		if (spl[y][0] != '#')
 		{
-			lemin->rooms[room] = charge_room(spl[y], room);
+			lemin->rooms[room] = charge_room(spl[y], room, &flag);
+			if (flag)
+			{
+				lemin->rooms_len = (flag == 1 ? room - 1 : room);
+				return (0);
+			}
 			lemin->rooms[room].links = NULL;
-			if (y == lemin->start)
-			{
-				lemin->rooms[room].part = 1;
-				lemin->start = room;
-			}
-			if (y == lemin->end)
-			{
-				lemin->rooms[room].part = -1;
-				lemin->end = room;
-			}
+			take_start_end(lemin, room, y);
 			room++;
 		}
 	}
