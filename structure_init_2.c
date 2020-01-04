@@ -96,18 +96,21 @@ int     take_links(t_lemin *lemin, char **spl)
 	y = lemin->start_links - 1;
 	while (spl[++y])
 	{
-		hash_found.first_name = NULL;
-		hash_found.second_name = NULL;
-		if (!fill_one_link(spl[y], &hash_found, lemin))
-			return (0);
-		if (!create_link_in_room(lemin, hash_found))
+		if (spl[y][0] != '#')
 		{
+			hash_found.first_name = NULL;
+			hash_found.second_name = NULL;
+			if (!fill_one_link(spl[y], &hash_found, lemin))
+				return (0);
+			if (!create_link_in_room(lemin, hash_found))
+			{
+				free(hash_found.first_name);
+				free(hash_found.second_name);
+				return (0);
+			}
 			free(hash_found.first_name);
 			free(hash_found.second_name);
-			return (0);
 		}
-		free(hash_found.first_name);
-		free(hash_found.second_name);
 	}
 	return (1);
 }

@@ -62,10 +62,10 @@ int         fill_coords_pool(t_lemin *lemin, int ***coords)
 {
 	int i;
 
-	i = -1;
+	i = 0;
 	if (!((*coords) = (int **)malloc(sizeof(int *) * (lemin->rooms_len + 1))))
 		return (0);
-	while (++i < lemin->rooms_len)
+	while (i < lemin->rooms_len)
 	{
 		if (!((*coords)[i] = (int *)malloc(sizeof(int) * 2)))
 		{
@@ -74,8 +74,9 @@ int         fill_coords_pool(t_lemin *lemin, int ***coords)
 			free((*coords));
 			return (0);
 		}
+		i++;
 	}
-	(*coords)[++i] = NULL;
+	(*coords)[i] = NULL;
 	i = -1;
 	while (++i < lemin->rooms_len)
 	{

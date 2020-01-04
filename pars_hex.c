@@ -72,7 +72,7 @@ int lets_read(void)
 	char **spl;
 	int fd;
 
-	fd = open("hex_test",O_RDONLY);
+	fd = open("trick",O_RDONLY);
 	if (!(input = ft_undin(fd)))
 		return (0);
 	if (search_void_string(input))

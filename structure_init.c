@@ -33,7 +33,33 @@ int     take_ants(t_lemin *lemin, char **spl)
 	return (1);
 }
 
-void    find_borders(t_lemin *lemin, char **spl)
+int     fill_start_end(char **spl, int y, t_lemin *lemin)
+{
+	static int start_count;
+	static int end_count;
+
+	if (spl[y][0] == '#')
+	{
+		if (!ft_strncmp(spl[y], "##start", 7) && spl[y + 1] && spl[y + 1][0] != '#')
+		{
+			lemin->start = y + 1;
+			start_count++;
+		}
+	}
+	if (spl[y][0] == '#')
+	{
+		if (!ft_strncmp(spl[y], "##end", 5) && spl[y + 1] && spl[y + 1][0] != '#')
+		{
+			lemin->end = y + 1;
+			end_count++;
+		}
+	}
+	if (start_count > 1 || end_count > 1)
+		return (0);
+	return (1);
+}
+
+int    find_borders(t_lemin *lemin, char **spl)
 {
 	int y;
 	int rooms_count;
@@ -46,19 +72,12 @@ void    find_borders(t_lemin *lemin, char **spl)
 			break ;
 		if (spl[y][0] != '#')
 			rooms_count++;
-		if (spl[y][0] == '#')
-		{
-			if (!ft_strncmp(spl[y], "##start", 7) && spl[y + 1] && spl[y + 1][0] != '#')
-				lemin->start = y + 1;
-		}
-		if (spl[y][0] == '#')
-		{
-			if (!ft_strncmp(spl[y], "##end", 5) && spl[y + 1] && spl[y + 1][0] != '#')
-				lemin->end = y + 1;
-		}
+		if (!fill_start_end(spl, y, lemin))
+			return (0);
 	}
 	lemin->rooms_len = rooms_count;
 	lemin->start_links = y;
+	return (1);
 }
 
 int    remember_room_name(char *str, char **room_name, int *i)
@@ -118,7 +137,8 @@ int     take_rooms(t_lemin *lemin, char **spl)
 	int room;
 	int flag;
 
-	find_borders(lemin, spl);
+	if (!find_borders(lemin, spl))
+		return (1);
 	room = 0;
 	flag = 0;
 	if (!(lemin->rooms = (t_room *)malloc(sizeof(t_room) * lemin->rooms_len)))
