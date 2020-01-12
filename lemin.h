@@ -40,6 +40,7 @@ typedef struct      s_room
 struct              s_links
 {
 	t_room                 *link;
+	int                     dead;
 	struct s_links         *next;
 };
 
@@ -49,6 +50,16 @@ typedef struct      s_hash_table
 	struct s_hash_table *next;
 
 }                   t_hash_table;
+
+typedef struct      s_way
+{
+	t_links         *ways;
+	int             way_count;
+	int             step_on_way;
+	int             step_lvl;
+	struct s_way    *next;
+	struct s_way    *prev;
+}                   t_way;
 
 typedef struct      s_lemin
 {
@@ -60,12 +71,15 @@ typedef struct      s_lemin
 	int             start_rooms;
 	int             start;
 	int             end;
+	t_way           path;
 	char            **initial_text;
 }                   t_lemin;
 
+
+
 int		ft_atoi_push(char *str, int *i, int *ower);
 char			**ft_strsplit_lem(char const *str, char c);
-int     lets_read(void);
+int     lets_read(t_lemin *lemin);
 int         init_lemin(t_lemin *lemin, char **spl);
 int     take_ants(t_lemin *lemin, char **spl);
 int     take_rooms(t_lemin *lemin, char **spl);

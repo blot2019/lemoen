@@ -88,12 +88,21 @@ int     fill_one_link(char *str, t_hash *hash_found, t_lemin *lemin)
 	return (1);
 }
 
+int     error_out_link_create(t_hash *hash_found)
+{
+	free((*hash_found).first_name);
+	free((*hash_found).second_name);
+	return (0);
+}
+
 int     take_links(t_lemin *lemin, char **spl)
 {
 	int y;
 	t_hash hash_found;
+	int links_count;
 
 	y = lemin->start_links - 1;
+	links_count = 0;
 	while (spl[++y])
 	{
 		if (spl[y][0] != '#')
@@ -103,14 +112,15 @@ int     take_links(t_lemin *lemin, char **spl)
 			if (!fill_one_link(spl[y], &hash_found, lemin))
 				return (0);
 			if (!create_link_in_room(lemin, hash_found))
-			{
-				free(hash_found.first_name);
-				free(hash_found.second_name);
-				return (0);
-			}
+				return (error_out_link_create(&hash_found));
 			free(hash_found.first_name);
 			free(hash_found.second_name);
+			links_count++;
 		}
+		else if (!ft_strcmp(spl[y], "##start") || !ft_strcmp(spl[y], "##end"))
+			return (0);
 	}
+	if (!links_count)
+		return (0);
 	return (1);
 }

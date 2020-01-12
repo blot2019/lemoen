@@ -42,13 +42,11 @@ char	*ft_undin(int fd)
 	return (buf);
 }
 
-int check_and_parse(char **spl)
+int check_and_parse(char **spl, t_lemin *lemin)
 {
-	t_lemin lemin;
-
-	lemin.start = -1;
-	lemin.end = -1;
-	if (!init_lemin(&lemin, spl))
+	lemin->start = -1;
+	lemin->end = -1;
+	if (!init_lemin(lemin, spl))
 		return (0);
 	return (1);
 }
@@ -66,14 +64,27 @@ int search_void_string(char *str)
 	return (0);
 }
 
-int lets_read(void)
+char    *ft_undin_second(int fd)
+{
+	char	*buf;
+	int     ret;
+
+	if (!(buf = (char *)malloc(sizeof(char) * 10000000)))
+		return (NULL);
+	ret = read(fd, buf, 10000000);
+	buf[ret] = '\0';
+	return (buf);
+}
+
+int lets_read(t_lemin *lemin)
 {
 	char *input;
 	char **spl;
 	int fd;
 
-	fd = open("trick",O_RDONLY);
-	if (!(input = ft_undin(fd)))
+	fd = open("map_simple",O_RDONLY);
+	//fd = 0;
+	if (!(input = ft_undin_second(fd)))
 		return (0);
 	if (search_void_string(input))
 	{
@@ -82,7 +93,7 @@ int lets_read(void)
 	}
 	spl = ft_strsplit(input, '\n');
 	free(input);
-	if (!check_and_parse(spl))
+	if (!check_and_parse(spl, lemin))
 		return (0);
 	return (1);
 }

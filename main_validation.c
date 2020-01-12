@@ -14,7 +14,10 @@ int err_out(void)
 
 int main(int ac, char **av)
 {
-	if (!lets_read())
+	t_lemin lemin;
+
+	if (!lets_read(&lemin))
 		return (err_out());
+	ft_putstr("[OK]");
 	return (0);
 }

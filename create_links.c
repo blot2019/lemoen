@@ -11,6 +11,7 @@ t_links  *create_link(t_room *room)
 	if (!(link = (t_links *)malloc(sizeof(t_links))))
 		return (NULL);
 	link->link = room;
+	link->dead = 0;
 	link->next = NULL;
 	return (link);
 }
@@ -74,8 +75,10 @@ int     create_link_in_room(t_lemin *lemin, t_hash hash_found)
 	t_room *first_room;
 	t_room *second_room;
 
-	first_room = search_in_table(lemin, hash_found.hash_first, hash_found.first_name);
-	second_room = search_in_table(lemin, hash_found.hash_second, hash_found.second_name);
+	if (!(first_room = search_in_table(lemin, hash_found.hash_first, hash_found.first_name)))
+		return (0);
+	if (!(second_room = search_in_table(lemin, hash_found.hash_second, hash_found.second_name)))
+		return (0);
 	if (!push_link(&first_room->links, second_room))
 		return (0);
 	if (!push_link(&second_room->links, first_room))

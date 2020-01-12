@@ -21,13 +21,14 @@ int     take_ants(t_lemin *lemin, char **spl)
 			if (ft_isspace(spl[y][0]))
 				return (0);
 			lemin->ant_count = ft_atoi_push(spl[y], &x, &ower);
-			x++;
 			if (lemin->ant_count  < 1 || !ower || spl[y][x])
 			{
 				lemin->start_rooms = y;
 				return (0);
 			}
 		}
+		else if (!ft_strncmp(spl[y], "##start", 7) || !ft_strncmp(spl[y], "##end", 5))
+			return (0);
 	}
 	lemin->start_rooms = y;
 	return (1);
